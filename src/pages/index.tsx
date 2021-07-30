@@ -1,5 +1,4 @@
 import { Flex, Stack } from '@chakra-ui/react'
-import { Input } from '../components/Form/Input'
 
 export default function Home() {
   return (
@@ -9,7 +8,6 @@ export default function Home() {
       align='center'
       justify='center'>
       <Flex
-
         width='100%'
         maxWidth={360}
         bg='gray.800'
