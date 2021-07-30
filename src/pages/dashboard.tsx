@@ -51,7 +51,7 @@ export default function Dashboard() {
               {DBPatient.map((patient, id) => (
                 <Tbody key={id}>
                   <Tr>
-                    <Td>{patient.name}</Td>
+                    <Td sx={{ cursor: 'pointer' }}>{patient.name}</Td>
                     <Td textAlign='center'>{patient.NumEnf}</Td>
                     <Td textAlign='center'>{patient.NumSala}</Td>
                     <Td textAlign='center'>{patient.dataInicio}</Td>
@@ -78,6 +78,7 @@ export default function Dashboard() {
                         }
                       </Flex>
                     </Td>
+
                     <Th>
                       <IconButton aria-label="Add to friends" fontSize='20' icon={<RiPencilLine />} />
                     </Th>
