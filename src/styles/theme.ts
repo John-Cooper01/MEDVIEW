@@ -30,7 +30,7 @@ export const theme = extendTheme({
   styles: {
     global: (props) => ( {
       body:  {
-        bg: mode('gray.900', 'gray.50')(props),
+        bg: mode('gray.900', 'gray.100')(props),
         color: 'gray.50'
       }
     })

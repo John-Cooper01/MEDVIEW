@@ -24,7 +24,7 @@ const InputNumberBase: ForwardRefRenderFunction<HTMLInputElement, InputProps>
             {label}
           </Text>
           <NumberInput
-            focusBorderColor='red.500'
+            focusBorderColor='blue.500'
             bgColor='gray.900'
             variant='filled'
             _hover={{

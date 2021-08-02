@@ -1,7 +1,8 @@
-import { Stack, Box } from "@chakra-ui/react";
+import { Stack, Box, useColorModeValue } from "@chakra-ui/react";
 import { PaginationItem } from "./PaginationItem";
 
 export function Pagination() {
+  const subTitle = useColorModeValue('gray.50', 'gray.900')
   return (
     <Stack
       direction={['column', 'row']}
@@ -9,8 +10,7 @@ export function Pagination() {
       mt='8'
       justify='space-between'
       align='center'>
-
-      <Box>
+      <Box color={subTitle}>
         <strong>0</strong> - <strong>10</strong>
       </Box>
 
