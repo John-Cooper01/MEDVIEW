@@ -45,7 +45,6 @@ export default function Home() {
           </motion.div>
         </Box>
       </Flex>
-
     </Flex>
   )
 }

@@ -1,6 +1,7 @@
+import { useRouter } from 'next/router'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import {
-  Flex, VStack, HStack, Box, Button, Textarea
+  Flex, VStack, HStack, Box, Button, useToast, Textarea
 } from "@chakra-ui/react"
 import { Input } from '../../components/Form/Input'
 import { InputNumber } from '../../components/Form/InputNumber'
@@ -71,6 +72,7 @@ type FormAdd = {
   procedimento: string;
   cirurgiao: string;
   teste: string;
+  observação: string;
 }
 
 export function ModalAdd() {
@@ -79,12 +81,21 @@ export function ModalAdd() {
   })
 
   const { errors } = formState
+  const router = useRouter()
 
 
   const handleAdd: SubmitHandler<FormAdd> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 1000))
+    toast({
+      title: 'Cadastrado com sucesso.',
+      status: 'success',
+      position: 'top-right',
+      variant: 'solid',
+    })
     console.log(values)
   }
+
+  const toast = useToast()
 
   return (
     <Box>
@@ -153,11 +164,16 @@ export function ModalAdd() {
             {...register('cirurgiao')} />
 
           <Textarea
+            name='observação'
+            type='text'
+            label='Observação'
             size='sm'
+            placeholder="Observações"
+            {...register('observação')}
           />
 
           <Select
-            onChange={handleAdd}
+            //onChange={handleAdd}
             styles={customStyles}
             isMulti
             options={options} />
@@ -167,6 +183,7 @@ export function ModalAdd() {
             left='230px'
             type='submit'
             colorScheme='blue'
+            loadingText="Loading"
             isLoading={formState.isSubmitting}>
             Salvar
           </Button>

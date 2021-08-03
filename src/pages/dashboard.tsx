@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {
   Flex, Box, Table, Thead, Tr, Th, Tbody, Td, Button, Heading, Icon, useDisclosure,
   Modal, ModalOverlay, ModalHeader, ModalContent, ModalCloseButton,
-  ModalBody, useColorModeValue
+  ModalBody, useColorModeValue, ModalFooter
 } from '@chakra-ui/react'
 import { Pagination } from '../components/Pagination'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
@@ -172,6 +172,8 @@ export default function Dashboard() {
                 <ModalBody>
                   <ModalAdd />
                 </ModalBody>
+                <ModalFooter>
+                </ModalFooter>
               </ModalContent>
             </Modal>
           </Box>
