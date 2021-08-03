@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 import { Pagination } from '../components/Pagination'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
+import { FiAlertOctagon, FiAlertTriangle, FiAlertCircle } from 'react-icons/fi'
 import { FaGgCircle } from 'react-icons/fa'
 import { BsSquareFill } from 'react-icons/bs'
 import { Header } from "../components/Header"
@@ -89,24 +90,24 @@ export default function Dashboard() {
                           <Flex alignItems='center' justify='center'>
                             {
                               patient.statusPatient === 'PS'
-                                ? <FaGgCircle size='35px' color='yellow' />
+                                ? <FiAlertCircle size='35px' color='yellow' />
                                 : patient.statusPatient === 'PCC'
-                                  ? <FaGgCircle size='35px' color='gray' />
+                                  ? <FiAlertOctagon size='35px' color='gray' />
                                   : patient.statusPatient === 'PC'
-                                    ? <FaGgCircle size='35px' color='red' />
+                                    ? <FiAlertTriangle size='35px' color='red' />
                                     : patient.statusPatient === 'RPA'
-                                      ? <FaGgCircle size='35px' color='orange' />
+                                      ? <FiAlertCircle size='35px' color='orange' />
                                       : patient.statusPatient === 'EL'
-                                        ? <BsSquareFill size='35px' color='green' />
+                                        ? <FiAlertCircle size='35px' color='green' />
                                         : patient.statusPatient === 'PT'
-                                          ? <BsSquareFill size='35px' color='blue' />
+                                          ? <FiAlertCircle size='35px' color='blue' />
                                           : ''
                             }
                           </Flex>
                         </Td>
 
                         <Th>
-                          <RiPencilLine fontSize='25px' color={colorIcons} />
+                          <RiPencilLine fontSize='25px' color={colorIcons} cursor='pointer' />
                         </Th>
                       </Tr>
 
@@ -120,42 +121,42 @@ export default function Dashboard() {
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 1.2, duration: 1.2 }}>
-                    <Flex p='4px' bg='blue.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FaGgCircle size='25px' color='blue' /> </Box>  <Box>Paciente em transporte </Box> </Flex>
+                    <Flex p='4px' bg='blue.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FiAlertCircle size='25px' color='blue' /> </Box>  <Box>Paciente em transporte </Box> </Flex>
                   </motion.div>
 
                   <motion.div
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 1.3, duration: 1.3 }}>
-                    <Flex p='4px' bg='gray.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FaGgCircle size='25px' color='gray' /> </Box> <Box>Paciente no centro cirúrgico</Box> </Flex>
+                    <Flex p='4px' bg='gray.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FiAlertOctagon size='25px' color='gray' /> </Box> <Box>Paciente no centro cirúrgico</Box> </Flex>
                   </motion.div>
 
                   <motion.div
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 1.4, duration: 1.4 }}>
-                    <Flex p='4px' bg='yellow.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FaGgCircle size='25px' color='yellow' /></Box> <Box>Paciente em sala</Box> </Flex>
+                    <Flex p='4px' bg='yellow.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FiAlertCircle size='25px' color='yellow' /></Box> <Box>Paciente em sala</Box> </Flex>
                   </motion.div>
 
                   <motion.div
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 1.5, duration: 1.5 }}>
-                    <Flex p='4px' bg='red.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FaGgCircle size='25px' color='red' /></Box> <Box>Paciente em cirurgia </Box></Flex>
+                    <Flex p='4px' bg='red.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FiAlertTriangle size='25px' color='red' /></Box> <Box>Paciente em cirurgia </Box></Flex>
                   </motion.div>
 
                   <motion.div
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 1.6, duration: 1.7 }}>
-                    <Flex p='4px' bg='orange.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <BsSquareFill size='25px' color='orange' /></Box> <Box>Encaminhado ao RPA </Box></Flex>
+                    <Flex p='4px' bg='orange.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FiAlertCircle size='25px' color='orange' /></Box> <Box>Encaminhado ao RPA </Box></Flex>
                   </motion.div>
 
                   <motion.div
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 1.8, duration: 1.8 }}>
-                    <Flex p='4px' bg='green.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <BsSquareFill size='25px' color='green' /></Box> <Box>Encaminhado ao leito </Box></Flex>
+                    <Flex p='4px' bg='green.900' alignItems='center' borderRadius='5px'> <Box mr='10px'> <FiAlertCircle size='25px' color='green' /></Box> <Box>Encaminhado ao leito </Box></Flex>
                   </motion.div>
                 </Flex >
               </Box>
